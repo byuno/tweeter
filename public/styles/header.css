@@ -1,0 +1,13 @@
+header{
+  height: 400px;
+  width: 100%;
+
+  position: relative;
+  background-color:#a18440;
+  /* position: absolute -->*/
+  text-align: center;
+  font-family: Source Sans Pro, sans-serif;
+  background-color: #a18440;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
