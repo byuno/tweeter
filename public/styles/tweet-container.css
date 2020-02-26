@@ -1,0 +1,54 @@
+.tweetContainer{
+  margin-top: 20px;
+  border: 7px solid #545149;
+  opacity: 0.5;
+}
+.tweetContainer:hover{
+  box-shadow: 10px 10px 5px grey;
+  opacity: 1;
+}
+
+.tweetHandle{
+  opacity: 0;
+  }
+article:hover .tweetHandle{
+opacity: 1;
+}
+
+
+
+.tweetHeader{
+  border: none;
+  height: 75px;
+  background: #f4f1ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  margin-top: 15px
+}
+
+.tweetUserName{
+  float: right;
+  margin-left: 10px;
+}
+
+
+.tweetBody{
+  width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.tweetFooter{
+  background: #f4f1ec;
+  border-top: 7px solid #545149;
+  height: 75px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
