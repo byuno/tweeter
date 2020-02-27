@@ -7,7 +7,7 @@
 
 $(document).ready(function () {
   //console log appears on the console (dev tools) on page.
-  
+
   // const data = [
   //   {
   //     "user": {
@@ -33,12 +33,12 @@ $(document).ready(function () {
   //     "created_at": 1461113959088
   //   }
   // ];
-  
+
   console.log("ready!");
   // --- our code goes here ---
   const createTweetElement = function (tweet) {
     const $tweet = $(
-  `
+      `
   <article class="tweetContainer">
     <header class="tweetHeader">
     <div>
@@ -63,16 +63,16 @@ $(document).ready(function () {
     </footer>
   </article>
   `
-  ).addClass('tweet');
-  
-  return $tweet;
+    ).addClass('tweet');
+
+    return $tweet;
   }
 
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    for(let i = 0; i < tweets.length; i++){
+    for (let i = 0; i < tweets.length; i++) {
       //console.log(tweets[i]);
       let $tweet = createTweetElement(tweets[i]);
       $(".tweetsContainer").prepend($tweet);
@@ -81,20 +81,29 @@ $(document).ready(function () {
   }
 
   // AJAX to post new tweets
-  $(function() {
+  $(function () {
     const $form = $('#tweetForm');
-    $form.submit(function(event){
+    $form.submit(function (event) {
       event.preventDefault();
-      const serializedForm = $( this ).serialize();
-      $.post('/tweets', serializedForm)
-      .then(function() {
-        loadTweets();
-      })
+      const hasLength = function () {
+        return $(".tweetTextArea").val() && $(".tweetTextArea").val().length > 0 ? true : false
+      }
+      // console.log(hasLength());
+      if (!hasLength()) {
+        alert("hello world")
+      } else {
+        const serializedForm = $(this).serialize();
+        $.post('/tweets', serializedForm)
+          .then(function () {
+            loadTweets();
+          })
+      }
+
     })
   });
 
   //GET data from the server and present them on the page.
-  const loadTweets = function(){
+  const loadTweets = function () {
     $.get("/tweets", function (data) {
       renderTweets(data);
     });
@@ -102,6 +111,5 @@ $(document).ready(function () {
   loadTweets()
 
 });
-  
-      
-  
+
+
