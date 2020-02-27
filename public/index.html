@@ -58,7 +58,7 @@
     <section class="new-tweet" data-limit="140">
       <h2>Compose Tweet</h2>
       
-      <form Content-Type: “application/x-www-form-urlencoded” method=“POST” action=“/tweets”>
+      <form id="tweetForm" Content-Type: “application/x-www-form-urlencoded” method=“POST” action=“/tweets”>
         <textarea class="tweetTextArea" name="text" placeholder="What are you humming about?"></textarea>
         <input class="tweetButton" type="submit" value="Tweet">
         <span class="tweetCounter">140</span>
@@ -108,6 +108,9 @@
   </main>
   <!-- jQuery script -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/form-validation.js"></script>
+
+  <!-- moment library for date conversion-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 </body>
 

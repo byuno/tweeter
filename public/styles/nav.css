@@ -1,5 +1,4 @@
-nav {
-  
+nav{
   position: fixed;
   z-index: 1030;
   background-color: #4056A1;
@@ -7,13 +6,10 @@ nav {
   box-sizing: border-box;
   height: 120px;
   width: 100%;
-
-
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
 }
 
 .tweeterTitle{
@@ -21,10 +17,7 @@ nav {
   margin-left: 1.5em;
 }
 
-.newTweet {
+.newTweet{
   font-family: Source Sans Pro, sans-serif;
   margin-right: 1.5em;
 }
-
-
-

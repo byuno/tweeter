@@ -2,7 +2,9 @@
   margin-top: 20px;
   border: 7px solid #545149;
   opacity: 0.5;
+  transition: 400ms;
 }
+
 .tweetContainer:hover{
   box-shadow: 10px 10px 5px grey;
   opacity: 1;
@@ -10,12 +12,12 @@
 
 .tweetHandle{
   opacity: 0;
-  }
+  transition: 400ms
+}
+
 article:hover .tweetHandle{
 opacity: 1;
 }
-
-
 
 .tweetHeader{
   border: none;
@@ -33,7 +35,6 @@ opacity: 1;
   float: right;
   margin-left: 10px;
 }
-
 
 .tweetBody{
   width: 90%;
