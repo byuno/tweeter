@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/arrow.css" type="text/css" />
 
 
 
@@ -37,9 +38,14 @@
       <span class="tweeterTitle">tweeter</span>
     </div>
 
-    <div>
+    <div class="write-tweet">
       <span class="newTweet"><b>Write</b> a new tweet</span>
+      <a class="arrow-icon">
+        <span class="left-bar"></span>
+        <span class="right-bar"></span>
+      </a>
     </div>
+
   </nav>
 
   <!-- Header -->
@@ -47,7 +53,6 @@
     <div>
       <img src="/images/profile-hex.png">
     </div>
-    <br>
     <div>
       <h2>Your Name</h2>
     </div>
@@ -55,14 +60,19 @@
   
   <!-- Page-specific (main) content here -->
   <main class="container">
+    
     <section class="new-tweet" data-limit="140">
+      
       <h2>Compose Tweet</h2>
       
       <form id="tweetForm" Content-Type: “application/x-www-form-urlencoded” method=“POST” action=“/tweets”>
+        
         <textarea class="tweetTextArea" name="text" placeholder="What are you humming about?"></textarea>
         <input class="tweetButton" type="submit" value="Tweet">
         <span class="tweetCounter">140</span>
+      
       </form>
+
     </section>
       
       <!-- Tweet containter -->
@@ -82,14 +92,7 @@
           <p class="tweetBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim egestas enim id maximus. Sed
             faucibus magna at tincidunt ultricies. Vivamus bibendum, metus ac sagittis ornare, tellus ante laoreet
             ligula, ullamcorper laoreet est nunc eu tortor. Etiam vitae rhoncus purus, eu vulputate dolor. Aenean
-            facilisis sed mauris sit amet pharetra. Maecenas dictum sapien enim, vitae tempus enim malesuada in.
-            Praesent ligula dolor, iaculis quis nunc non, lacinia suscipit dui. Fusce tincidunt imperdiet ipsum non
-            dignissim. Fusce aliquam, lectus sollicitudin commodo auctor, nisi dui aliquet purus, sit amet eleifend
-            tellus magna eget orci. Ut ac nunc id quam porttitor pellentesque.
-
-            Proin condimentum egestas libero, non placerat tortor sollicitudin eu. Cras enim est, viverra eu lacus
-            vitae, consectetur laoreet nulla. Quisque ultricies eu ipsum a maximus. Cras suscipit aliquam gravida. Sed
-            felis tellus, varius pellentesque metus in, sagittis finibus magna. Morbi blandit.</p>
+            facilisis sed mauris sit amet pharetra. Maecenas dictum sapien enim, vitae tempus enim malesuada in..</p>
 
           <footer class="tweetFooter">
             <div>
@@ -109,6 +112,7 @@
   <!-- jQuery script -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/form-validation.js"></script>
+  
 
   <!-- moment library for date conversion-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>

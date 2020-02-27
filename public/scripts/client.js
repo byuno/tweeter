@@ -37,32 +37,44 @@ $(document).ready(function () {
   console.log("ready!");
   // --- our code goes here ---
   const createTweetElement = function (tweet) {
+
+    const escape =  function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
     const $tweet = $(
       `
-  <article class="tweetContainer">
-    <header class="tweetHeader">
-    <div>
-      <span><img src=${tweet["user"]["avatars"]}> </span>
-      <p class="tweetUserName">${tweet["user"]["name"]}</p>
-    </div>
-    
-    <div>
-      <span class="tweetHandle">${tweet["user"]["handle"]}</span>
-    </div>
-    </header>
-    
-    <p class= "tweetBody">${tweet["content"]["text"]}</p>
-    
-    <footer class="tweetFooter">
-      <div>
-        <span>${moment(tweet["created_at"]).fromNow()}</span>
-      </div>
-      <div>
-        <span>Icons</span>
-      </div>
-    </footer>
-  </article>
-  `
+      <article class="tweetContainer">
+        
+        <header class="tweetHeader">
+          
+        <div>
+          <span><img src=${tweet["user"]["avatars"]}> </span>
+          <p class="tweetUserName">${tweet["user"]["name"]}</p>
+        </div>
+        
+        <div>
+          <span class="tweetHandle">${escape(tweet["user"]["handle"])}</span>
+        </div>
+      
+      </header>
+        
+        <p class= "tweetBody">${escape(tweet["content"]["text"])}</p>
+        
+        <footer class="tweetFooter">
+          <div>
+            <span>${moment(tweet["created_at"]).fromNow()}</span>
+          </div>
+          
+          <div>
+            <span>Icons</span>
+          </div>
+        </footer>
+      
+       </article>
+      `
     ).addClass('tweet');
 
     return $tweet;
@@ -90,7 +102,7 @@ $(document).ready(function () {
       }
       // console.log(hasLength());
       if (!hasLength()) {
-        alert("hello world")
+        alert("Text area is empty. Please enter text.")
       } else {
         const serializedForm = $(this).serialize();
         $.post('/tweets', serializedForm)
@@ -109,6 +121,11 @@ $(document).ready(function () {
     });
   }
   loadTweets()
+
+//Arrow feature
+  $( ".arrow-icon" ).click(function() {
+    $(this).toggleClass("open");
+  });
 
 });
 
