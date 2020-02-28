@@ -27,14 +27,9 @@ top: 120px;
   .desktopView{
     display: flex;
     justify-content: space-between;
-  /* width:70%; */
-
-    
   }
 
   .desktopView .mainContainer{
     width: 70%;
   }
-
-
 } 

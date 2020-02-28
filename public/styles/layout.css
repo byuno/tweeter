@@ -28,7 +28,7 @@ body{
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main{
+main{
 width: 90%;
 background-color: #f4f1ec;
 margin: auto;
@@ -40,18 +40,15 @@ margin: auto;
   /* margin-top: 382px; */
   display: none;
  }
+
  .container{
-
   margin-top: 520px;
+}
 
- }
-
-
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .container{
 
     margin-top: 150px;
   
    }
-  
- }
+  }

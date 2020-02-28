@@ -3,13 +3,11 @@
   border: 7px solid red;
   margin-bottom: 1em;
   margin: auto;
-    /* height: 2em; */
-    display: none;
-    color: red;
+  display: none;
+  color: red;
 }
 
 .alert p{
-
   margin: auto;
   color: red;
 }
