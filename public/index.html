@@ -4,10 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-  <meta
-      name=“viewport”
-      content=“width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -55,75 +52,61 @@
   </nav>
 
   <!-- Header -->
-  <header>
+  <div class=desktopView>
     <div>
-      <img src="/images/profile-hex.png">
+
+      <header>
+        <div>
+          <img src="/images/profile-hex.png">
+        </div>
+        <div>
+          <h2>Your Name</h2>
+        </div>
+      </header>
+
     </div>
+
     <div>
-      <h2>Your Name</h2>
-    </div>
-  </header>
-  
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    
-    <section class="new-tweet" data-limit="140">
-      
-      <h2>Compose Tweet</h2>
-      
-      <section class="alert">
-        <p> This test font</p>
-      </section>
-      
-      <form id="tweetForm" Content-Type: “application/x-www-form-urlencoded” method=“POST” action=“/tweets”>
-        
-        <textarea class="tweetTextArea" name="text" placeholder="What are you humming about?"></textarea>
-        <input class="tweetButton" type="submit" value="Tweet">
-        <span class="tweetCounter">140</span>
-      
-      </form>
-<!-- Replace the in-browser alert message -->
 
-    </section>
-      
-      <!-- Tweet containter -->
-      
-        <section class="tweetsContainer">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
 
-          <!-- <header class="tweetHeader">
-            <div>
-              <span><img src="https://i.imgur.com/73hZDYK.png"> </span>
-              <p class="tweetUserName">User Name</p>
-            </div>
-            <div>
-              <span>handle</span>
-            </div>
-          </header>
+        <section class="new-tweet" data-limit="140">
 
-          <p class="tweetBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim egestas enim id maximus. Sed
-            faucibus magna at tincidunt ultricies. Vivamus bibendum, metus ac sagittis ornare, tellus ante laoreet
-            ligula, ullamcorper laoreet est nunc eu tortor. Etiam vitae rhoncus purus, eu vulputate dolor. Aenean
-            facilisis sed mauris sit amet pharetra. Maecenas dictum sapien enim, vitae tempus enim malesuada in..</p>
+          <h2>Compose Tweet</h2>
 
-          <footer class="tweetFooter">
-            <div>
-              <span>Pasted Date</span>
-            </div>
-            <div>
-              <span>Icons</span>
-            </div>
-          </footer> -->
+          <section class="alert">
+            <p> This test font</p>
+          </section>
+
+          <form id="tweetForm" Content-Type: “application/x-www-form-urlencoded” method=“POST” action=“/tweets”>
+
+            <textarea class="tweetTextArea" name="text" placeholder="What are you humming about?"></textarea>
+            <input class="tweetButton" type="submit" value="Tweet">
+            <span class="tweetCounter">140</span>
+
+          </form>
+          <!-- Replace the in-browser alert message -->
 
         </section>
 
-      
+        <!-- Tweet containter -->
 
+        <section class="tweetsContainer">
+
+
+        </section>
+
+    </div>
+
+
+  </div>
 
   </main>
   <!-- jQuery script -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/form-validation.js"></script>
-  
+
 
   <!-- moment library for date conversion-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>

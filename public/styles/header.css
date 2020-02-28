@@ -4,13 +4,8 @@ top: 120px;
 
   height: 400px;
   width: 100%;
-  
-  /* margin-top: -262px; */
-  /* position: relative; */
   position: absolute;
   z-index: 1000;
-  /* background-color:#a18440; */
-  /* position: absolute */
   text-align: center;
   font-family: Source Sans Pro, sans-serif;
   background-color: #40a18a;
@@ -18,12 +13,16 @@ top: 120px;
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-@media only screen and (max-width: 900px) {
-  #header {
-    width: 33.3%;
-    float: left;
-    margin-top: 0;
-    margin-left: 2em;
-    background-color: #a18a;
+@media only screen and (min-width: 1024px) {
+  header {
+   
+    background-color: #a18440;
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .desktopView{
+    display: flex;
+    justify-content: space-between;
   }
 } 

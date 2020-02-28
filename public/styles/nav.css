@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   z-index: 1030;
-  background-color: #4056A1;
+  background-color: #40a18a;
   color:#FFFFFF;
   box-sizing: border-box;
   height: 120px;
@@ -21,3 +21,12 @@ nav {
   font-family: Source Sans Pro, sans-serif;
   margin-right: 1.5em;
 }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+
+
+   background-color: #4056A1;
+    /* background-color: #a16a40; */
+  }
+} 
