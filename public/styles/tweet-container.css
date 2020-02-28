@@ -9,7 +9,7 @@
 }
 
 .tweetContainer:hover{
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px #6540a1;
   opacity: 1;
 }
 
@@ -33,6 +33,10 @@ opacity: 1;
   margin: auto;
   margin-top: 15px;
   position: relative;
+
+
+  top: auto;
+
 }
 
 .tweetUserName{

@@ -34,6 +34,8 @@ $(document).ready(function () {
   //   }
   // ];
 
+  //$(".tweetsContainer").scrollIntoView();
+
   console.log("ready!");
   // --- our code goes here ---
   const createTweetElement = function (tweet) {
@@ -79,7 +81,7 @@ $(document).ready(function () {
 
     return $tweet;
   }
-
+ 
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -124,7 +126,14 @@ $(document).ready(function () {
 
 //Arrow feature
   $( ".arrow-icon" ).click(function() {
-    $(this).toggleClass("open");
+    if($(this).hasClass("open")){
+      $(".new-tweet").slideUp(400);
+      $(".arrow-icon").removeClass("open");
+    } else {
+      $(this).addClass("open");
+      $(".new-tweet").slideDown(400);
+    }
+      
   });
 
 });

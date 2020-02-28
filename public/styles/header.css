@@ -7,13 +7,13 @@ top: 120px;
   
   /* margin-top: -262px; */
   /* position: relative; */
-  position: fixed;
+  position: absolute;
   z-index: 1000;
-  background-color:#a18440;
+  /* background-color:#a18440; */
   /* position: absolute */
   text-align: center;
   font-family: Source Sans Pro, sans-serif;
-  background-color: #a18440;
+  background-color: #40a18a;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }

@@ -38,6 +38,7 @@ margin: auto;
 
  main .new-tweet{
   /* margin-top: 382px; */
+  display: none;
  }
 
 .container{
