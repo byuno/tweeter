@@ -17,3 +17,13 @@ top: 120px;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+@media only screen and (max-width: 900px) {
+  #header {
+    width: 33.3%;
+    float: left;
+    margin-top: 0;
+    margin-left: 2em;
+    background-color: #a18a;
+  }
+} 

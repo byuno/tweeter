@@ -97,15 +97,21 @@ $(document).ready(function () {
   // AJAX to post new tweets
   $(function () {
     const $form = $('#tweetForm');
+    const getLength = function () {
+      return $(".tweetTextArea").val() && $(".tweetTextArea").val().length
+    }
+    
     $form.submit(function (event) {
       event.preventDefault();
-      const hasLength = function () {
-        return $(".tweetTextArea").val() && $(".tweetTextArea").val().length > 0 ? true : false
-      }
+      
       // console.log(hasLength());
-      if (!hasLength()) {
-        alert("Text area is empty. Please enter text.")
-      } else {
+      if (getLength() <= 0) {
+        $(".alert").text("The text box is empty. Please tweet something").slideDown(400);
+      } else if(getLength() > 140 ){
+        $(".alert").text("The text box is full. Please delete something").slideDown(400);
+      } else{
+        $(".alert").text("The text box is full. Please delete something").slideUp(400);
+        $(".alert").text("The text box is empty. Please tweet something").slideUp(400);
         const serializedForm = $(this).serialize();
         $.post('/tweets', serializedForm)
           .then(function () {
