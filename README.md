@@ -15,3 +15,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of Tweeter in Dektop mode when collapsed."](https://github.com/byuno/tweeter/blob/master/docs/Desktop-collapse.png)
+!["Screenshot of Tweeter in Dektop mode when expanded."](https://github.com/byuno/tweeter/blob/master/docs/Desktop-expand.png)
+!["Screenshot of Tweeter in Mobile mode when collapsed."](https://github.com/byuno/tweeter/blob/master/docs/Mobile-collapse.png)
+!["Screenshot of Tweeter in Mobile mode when expanded."](https://github.com/byuno/tweeter/blob/master/docs/Mobile-expand.png)
