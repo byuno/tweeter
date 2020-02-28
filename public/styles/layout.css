@@ -33,9 +33,15 @@ width: 90%;
 background-color: #f4f1ec;
 margin: auto;
 
-postion: absolute;
+/* position: absolute; */
  }
 
  main .new-tweet{
   /* margin-top: 382px; */
+ }
+
+.container{
+
+  margin-top: 520px;
+
  }

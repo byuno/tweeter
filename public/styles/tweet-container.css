@@ -3,6 +3,9 @@
   border: 7px solid #545149;
   opacity: 0.5;
   transition: 400ms;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .tweetContainer:hover{
