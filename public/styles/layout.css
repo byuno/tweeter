@@ -40,9 +40,18 @@ margin: auto;
   /* margin-top: 382px; */
   display: none;
  }
-
-.container{
+ .container{
 
   margin-top: 520px;
 
+ }
+
+
+ @media only screen and (min-width: 1024px) {
+  .container{
+
+    margin-top: 150px;
+  
+   }
+  
  }
