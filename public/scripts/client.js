@@ -84,10 +84,15 @@ $(document).ready(function () {
       } else{
         $(".alert").text("The text box is full. Please delete something").slideUp(400);
         $(".alert").text("The text box is empty. Please tweet something").slideUp(400);
+
+        
         const serializedForm = $(this).serialize();
         $.post('/tweets', serializedForm)
-          .then(function () {
-            loadTweets();
+        .then(function () {
+          loadTweets();
+          $(".tweetTextArea").val('');
+          $(".tweetCounter").text("140");
+
           })
       }
 
