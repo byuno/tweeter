@@ -63,11 +63,12 @@ $(document).ready(function () {
       let $tweet = createTweetElement(tweets[i]);
       $(".tweetsContainer").prepend($tweet);
     }
-
+    
   }
-
+  
   // AJAX to post new tweets
   $(function () {
+    $(".tweetsContainer").focus();
     const $form = $('#tweetForm');
     const getLength = function () {
       return $(".tweetTextArea").val() && $(".tweetTextArea").val().length
@@ -75,7 +76,7 @@ $(document).ready(function () {
     
     $form.submit(function (event) {
       event.preventDefault();
-      
+
       // console.log(hasLength());
       if (getLength() <= 0) {
         $(".alert").text("The text box is empty. Please tweet something").slideDown(400);
@@ -84,7 +85,7 @@ $(document).ready(function () {
       } else{
         $(".alert").text("The text box is full. Please delete something").slideUp(400);
         $(".alert").text("The text box is empty. Please tweet something").slideUp(400);
-
+        
         
         const serializedForm = $(this).serialize();
         $.post('/tweets', serializedForm)
