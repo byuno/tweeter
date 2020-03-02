@@ -13,6 +13,10 @@ top: 120px;
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+.headerUserName{
+  color: white;
+}
+
 
 @media only screen and (min-width: 1024px) {
   header {
